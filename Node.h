@@ -1,27 +1,28 @@
 #pragma once
 #include <limits>
+#include <vector>
 
 class Node
 {
 public:
 	Node() = default;
-
 	Node(int in_x, int in_y);
-
+	int GetX() const;
+	int GetY() const;
+public:
 	enum State
 	{
 		Unvisited = 0,
-		OnPath = 1,
-		Obstacle = 2
+		Visited = 1,
+		OnPath = 2,
+		Obstacle = 3
 	};
 
 	State state = Unvisited;
 	float localGoal = INFINITY;
 	float globalGoal = INFINITY;
 	Node* parent = nullptr;
-
-	int GetX() const;
-	int GetY() const;
+	std::vector<Node*> neighborNodes;
 private:
 	int x = 0;
 	int y = 0;
