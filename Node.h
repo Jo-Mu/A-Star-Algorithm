@@ -20,6 +20,8 @@ public:
 	float globalGoal = INFINITY;
 	Node* parent = nullptr;
 
+	int GetX() const;
+	int GetY() const;
 private:
 	int x = 0;
 	int y = 0;
