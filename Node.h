@@ -15,7 +15,9 @@ public:
 		Unvisited = 0,
 		Visited = 1,
 		OnPath = 2,
-		Obstacle = 3
+		Start = 3,
+		End = 4,
+		Obstacle = 5
 	};
 
 	State state = Unvisited;
