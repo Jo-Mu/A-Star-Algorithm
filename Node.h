@@ -10,7 +10,7 @@ public:
 	int GetX() const;
 	int GetY() const;
 public:
-	enum State
+	enum class State
 	{
 		Unvisited = 0,
 		Visited = 1,
@@ -20,7 +20,7 @@ public:
 		Obstacle = 5
 	};
 
-	State state = Unvisited;
+	State state = State::Unvisited;
 	float localGoal = INFINITY;
 	float globalGoal = INFINITY;
 	Node* parent = nullptr;
